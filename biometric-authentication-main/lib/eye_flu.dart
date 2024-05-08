@@ -45,7 +45,15 @@ class _CameraScreenState extends State<CameraScreen> {
       appBar: AppBar(
         title: Text('Flue Detection Camera'),
       ),
-      body: CameraPreview(controller!),
+      body: Column(
+        children: [
+          CameraPreview(controller!),
+          Row(children: [
+            ElevatedButton(onPressed: null, child: Text("head_scan")),
+            ElevatedButton(onPressed: null, child: Text("about me"))
+          ])
+        ],
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
           if (controller != null && controller!.value.isInitialized) {
@@ -60,7 +68,7 @@ class _CameraScreenState extends State<CameraScreen> {
               if (faces.isNotEmpty) {
                 print('Face detected!');
               } else {
-                print('No face detected. Flu cannot be determined.');
+                print('No face detected. Flu cannot be determined');
               }
             }
           }
