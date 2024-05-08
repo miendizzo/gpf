@@ -1,0 +1,8 @@
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="splash_background_color"><div id="red"></div></color>
+
+    <!-- Add more color resources here if needed -->
+</resources>
